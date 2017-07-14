@@ -47,36 +47,32 @@ wordlist = load_words()
 
 # your code begins here!
 print"Welcome to hangman."
-print"Today in this game you will guess the letters and have a great time playing hangman"
+print"Today in this game you will guess the letter in a word you have 6 guesses good luck!"
 random_word= choose_word(wordlist)
 print random_word
 list = []
 str=random_word
 for letter in str:
     list.append(letter)
-print list
 list1=[]
 len(list1)
-print len(list1)
+print len(list)
 counter=0
 for letter in list:
-#len(list) == len(list):
     list1.append("_")
     counter=counter+1
-print list1, list
+print list1,list
 while list != list1:
     counter1 = 0
     guess = raw_input("Enter guess here:")
     while counter1 < len(list):
         if guess == list [counter1]:
             list1[counter1]= guess
-        print "That's correct!"
-        break
-    else:
-        print"the guess is incorrect"
-        break
+            print "That's correct!"
+       # else:
+           # print"the guess is incorrect"
         counter1 = counter1 + 1
-    print list1
+print list1
 
 
 
